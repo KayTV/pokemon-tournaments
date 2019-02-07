@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'tournaments',
   templateUrl: './tournaments.html'
 })
-export class HomeComponent {
+export class TournamentsComponent {
   title = 'Tournaments';
 }
