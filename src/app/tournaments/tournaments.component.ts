@@ -8,7 +8,7 @@ import { Pokemon } from '../models/pokemon.model';
 })
 export class TournamentsComponent implements OnInit {
   title = 'Tournaments';
-  pokemon;
+  pokemon: Pokemon;
 
   constructor(private pokemoneService: PokemonService) { }
 
@@ -17,7 +17,7 @@ export class TournamentsComponent implements OnInit {
   }
 
   getPokemon() {
-    this.pokemoneService.getPokemon().subscribe(pokemon =>{
+    this.pokemoneService.getPokemon('ditto').subscribe(pokemon =>{
       this.pokemon = pokemon;
       console.log(pokemon);
     })
