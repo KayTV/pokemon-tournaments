@@ -60,3 +60,15 @@ export interface PokemonStat {
 export interface PokemonType {
 
 }
+
+export interface Pokedex {
+  count: number;
+  next: string;
+  results: PokedexPokemon[];
+}
+
+export interface PokedexPokemon {
+  name: string;
+  sprite: string;
+  id?: number;
+}

@@ -6,4 +6,9 @@
 <img src="{{pokemon?.sprites?.front_default}}">
 <img src="{{pokemon?.sprites?.front_shiny}}">
 
+<div *ngFor="let pokemon of genOnePokemon">
+  {{pokemon.name}}
+  <img src="{{pokemon.sprite}}">
+</div>
+
 <!-- list of active tournaments -->

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../services/pokemon.service';
-import { Pokemon } from '../models/pokemon.model';
+import { Pokemon, PokedexPokemon } from '../models/pokemon.model';
 
 @Component({
   selector: 'tournaments',
@@ -9,11 +9,13 @@ import { Pokemon } from '../models/pokemon.model';
 export class TournamentsComponent implements OnInit {
   title = 'Tournaments';
   pokemon: Pokemon;
+  genOnePokemon: PokedexPokemon[];
 
   constructor(private pokemoneService: PokemonService) { }
 
   ngOnInit() {
     this.getPokemon();
+    this.getGenOnePokemon();
   }
 
   getPokemon() {
@@ -22,4 +24,11 @@ export class TournamentsComponent implements OnInit {
       console.log(pokemon);
     })
   }
+
+  getGenOnePokemon() {
+    this.genOnePokemon = this.pokemoneService.genOneTest();
+  }
+
+
+
 }
