@@ -4,7 +4,8 @@ import { Pokemon, PokedexPokemon } from '../models/pokemon.model';
 
 @Component({
   selector: 'tournaments',
-  templateUrl: './tournaments.html'
+  templateUrl: './tournaments.html',
+  styleUrls: ['./tournaments.less']
 })
 export class TournamentsComponent implements OnInit {
   title = 'Tournaments';

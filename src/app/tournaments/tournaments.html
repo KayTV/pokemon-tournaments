@@ -7,8 +7,10 @@
 <img src="{{pokemon?.sprites?.front_shiny}}">
 
 <div *ngFor="let pokemon of genOnePokemon">
-  {{pokemon.name}}
-  <img src="{{pokemon.sprite}}">
+  <div class="col-xs-1 pokedex-box">
+    <div>{{pokemon.name}}</div><br>
+    <div><img src="{{pokemon.sprite}}"></div>
+  </div>
 </div>
 
 <!-- list of active tournaments -->
