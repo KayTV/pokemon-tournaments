@@ -6,10 +6,12 @@
 <img src="{{pokemon?.sprites?.front_default}}">
 <img src="{{pokemon?.sprites?.front_shiny}}">
 
-<div *ngFor="let pokemon of genOnePokemon">
-  <div class="col-xs-1 pokedex-box">
-    <div>{{pokemon.name}}</div><br>
+<div class="row">
+  <div class="col-md-2 col-xs-12" *ngFor="let pokemon of genOnePokemon">
+    <div class="pokedex-box">
+    <div>{{pokemon.name}}</div>
     <div><img src="{{pokemon.sprite}}"></div>
+    </div>
   </div>
 </div>
 
