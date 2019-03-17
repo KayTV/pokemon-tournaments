@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TournamentsComponent } from './tournaments/tournaments.component';
+import { PokedexComponent } from './pokedex/pokedex.component';
 import { RanksComponent } from './ranks/ranks.component';
 
 import { PokemonService } from './services/pokemon.service';
@@ -12,7 +12,7 @@ import { PokemonService } from './services/pokemon.service';
 @NgModule({
   declarations: [
     AppComponent,
-    TournamentsComponent,
+    PokedexComponent,
     RanksComponent
   ],
   imports: [

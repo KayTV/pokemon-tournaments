@@ -3,12 +3,12 @@ import { PokemonService } from '../services/pokemon.service';
 import { Pokemon, PokedexPokemon } from '../models/pokemon.model';
 
 @Component({
-  selector: 'tournaments',
-  templateUrl: './tournaments.html',
-  styleUrls: ['./tournaments.less']
+  selector: 'pokedex',
+  templateUrl: './pokedex.html',
+  styleUrls: ['./pokedex.less']
 })
-export class TournamentsComponent implements OnInit {
-  title = 'Tournaments';
+export class PokedexComponent implements OnInit {
+  title = 'Pokedex';
   pokemon: Pokemon;
   genOnePokemon: PokedexPokemon[];
 

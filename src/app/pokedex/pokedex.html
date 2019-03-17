@@ -1,5 +1,5 @@
 <div class="padding-top: 20px">
-  Tournaments Page
+  Pokedex Page
 </div>
 
 {{pokemon?.name}}
@@ -9,7 +9,7 @@
 <div class="row">
   <div class="col-md-2 col-xs-12" *ngFor="let pokemon of genOnePokemon">
     <div class="pokedex-box">
-    <div>{{pokemon.name}}</div>
+    <div>#{{pokemon.id}} - {{pokemon.name}}</div>
     <div><img src="{{pokemon.sprite}}"></div>
     </div>
   </div>
