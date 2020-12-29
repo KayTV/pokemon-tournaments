@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'pokedex-tabs',
-  templateUrl: './pokedex-tabs.component.html',
-  styleUrls: [ '../app.component.css' ]
+  templateUrl: './pokedex-tabs.component.html'
 })
 
 export class PokedexTabsComponent  {

@@ -139,5 +139,8 @@
       }
     }
   },
-  "defaultProject": "pokemon-tournaments"
+  "defaultProject": "pokemon-tournaments",
+  "cli": {
+    "analytics": "a6f7af7a-e180-4e92-8457-4015dfb4fd5a"
+  }
 }
