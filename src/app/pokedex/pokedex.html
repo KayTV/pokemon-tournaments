@@ -15,7 +15,15 @@
       test 3
     </div>
   </div>
+  <div class="row">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Search Pokemon</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="searchPokemon">
+      <button (click)="getPokemon()">Submit</button>
+    </div>
+  </div>
 </div>
+
 
 
 {{pokemon?.name}}

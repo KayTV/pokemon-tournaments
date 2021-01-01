@@ -9,18 +9,19 @@ import { Pokemon, PokedexPokemon } from '../models/pokemon.model';
 })
 export class PokedexComponent implements OnInit {
   title = 'Pokedex';
+  searchPokemon: string;
   pokemon: Pokemon;
   genOnePokemon: PokedexPokemon[];
 
   constructor(private pokemoneService: PokemonService) { }
 
   ngOnInit() {
-    this.getPokemon();
+    // this.getPokemon();
     this.getGenOnePokemon();
   }
 
   getPokemon() {
-    this.pokemoneService.getPokemon('ditto').subscribe(pokemon =>{
+    this.pokemoneService.getPokemon(this.searchPokemon).subscribe(pokemon =>{
       this.pokemon = pokemon;
       console.log(pokemon);
     })
