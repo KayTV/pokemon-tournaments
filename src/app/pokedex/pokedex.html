@@ -1,34 +1,31 @@
-<div class="container-fluid">
+<div>
   <div class="row">
     <div class="col-md-12">
-      Pokedex Page
+      <h2>Pokedex Page</h2>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-3">
-      Test
-    </div>
-    <div class="col-md-3">
-      test 2
-    </div>
-    <div class="col-md-3">
-      test 3
+    <div class="col-md-12">
+      <form class="form-inline">
+        <div  class="form-group">
+          <label for="pokedex" >Search Pokemon: </label>
+          <input type="text" class="form-control" id="pokedex" name="pokemon" [(ngModel)]="searchPokemon">
+        </div>
+        <div class="form-group">
+          <button (click)="getPokemon()" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
     </div>
   </div>
   <div class="row">
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Search Pokemon</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="searchPokemon">
-      <button (click)="getPokemon()">Submit</button>
+    <div class="col-md-12">
+      {{pokemon?.name}}
+      <img src="{{pokemon?.sprites?.front_default}}">
+      <img src="{{pokemon?.sprites?.front_shiny}}">
     </div>
   </div>
 </div>
 
-
-
-{{pokemon?.name}}
-<img src="{{pokemon?.sprites?.front_default}}">
-<img src="{{pokemon?.sprites?.front_shiny}}">
 
 <!-- pokedex tabs based on generation -->
 <!-- todo -->
