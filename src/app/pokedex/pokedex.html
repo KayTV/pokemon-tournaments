@@ -4,18 +4,15 @@
       <h2>Pokedex Page</h2>
     </div>
   </div>
+  <br>
   <div class="row">
-    <div class="col-md-12">
-      <form class="form-inline">
-        <div  class="form-group">
-          <label for="pokedex" >Search Pokemon: </label>
-          <input type="text" class="form-control" id="pokedex" name="pokemon" [(ngModel)]="searchPokemon">
-        </div>
-        <div class="form-group">
-          <button (click)="getPokemon()" type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </form>
+    <div class="col-md-2">
+      <label for="pokedex">Search Pokemon: </label>
     </div>
+    <div class="col-md-5">
+      <input type="text" class="form-control" id="pokedex" name="pokemon" [(ngModel)]="searchPokemon">
+    </div>
+    <button (click)="getPokemon()" type="submit" class="btn btn-primary">Submit</button>
   </div>
   <div class="row">
     <div class="col-md-12">
