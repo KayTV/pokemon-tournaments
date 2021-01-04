@@ -16,13 +16,13 @@ export class PokedexComponent implements OnInit {
   constructor(private pokemoneService: PokemonService) { }
 
   ngOnInit() {
-    // this.getPokemon();
     this.getGenOnePokemon();
   }
 
   getPokemon() {
     this.pokemoneService.getPokemon(this.searchPokemon).subscribe(pokemon =>{
       this.pokemon = pokemon;
+      this.searchPokemon = '';
       console.log(pokemon);
     })
   }
