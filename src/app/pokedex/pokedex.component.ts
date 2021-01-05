@@ -8,7 +8,7 @@ import { Pokemon, PokedexPokemon } from '../models/pokemon.model';
   styleUrls: ['./pokedex.less']
 })
 export class PokedexComponent implements OnInit {
-  title = 'Pokedex';
+  title: string = 'Pokedex';
   searchPokemon: string;
   pokemon: Pokemon;
   genOnePokemon: PokedexPokemon[];
@@ -29,6 +29,7 @@ export class PokedexComponent implements OnInit {
 
   getGenOnePokemon() {
     this.genOnePokemon = this.pokemoneService.genOneTest();
+    console.log(this.genOnePokemon);
   }
 
 
