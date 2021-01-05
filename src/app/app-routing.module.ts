@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PokedexComponent } from './pokedex/pokedex.component';
 import { RanksComponent } from './ranks/ranks.component';
-import { PokedexTabsComponent } from './pokedex/pokedex-tabs.component';
+import { PokedexTabsComponent } from './pokedex/pokedex-regions/pokedex-regions.component';
 
 const routes: Routes = [
   {

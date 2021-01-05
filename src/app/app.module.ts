@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PokedexComponent } from './pokedex/pokedex.component';
 import { RanksComponent } from './ranks/ranks.component';
-import { PokedexTabsComponent } from './pokedex/pokedex-tabs.component';
+import { PokedexTabsComponent } from './pokedex/pokedex-regions/pokedex-regions.component';
 
 import { PokemonService } from './services/pokemon.service';
 
