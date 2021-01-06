@@ -16,6 +16,15 @@ export class PokedexTabsComponent  {
     },
     {
       name: 'Hoenn'
+    },
+    {
+      name: 'Sinnoh'
+    },
+    {
+      name: 'Unova'
+    },
+    {
+      name: 'Kalos'
     }
   ]
 }
