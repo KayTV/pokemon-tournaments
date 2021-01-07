@@ -28,7 +28,7 @@ export class PokedexComponent implements OnInit {
   }
 
   getGenOnePokemon() {
-    this.genOnePokemon = this.pokemoneService.genOneTest();
+    // this.genOnePokemon = this.pokemoneService.genOneTest();
     console.log(this.genOnePokemon);
   }
 

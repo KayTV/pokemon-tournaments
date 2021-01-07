@@ -64,7 +64,13 @@ export interface PokemonType {
 export interface Pokedex {
   count: number;
   next: string;
-  results: PokedexPokemon[];
+  previous: string;
+  results: PokedexResult[];
+}
+
+export interface PokedexResult {
+  name: string;
+  url: string;
 }
 
 export interface PokedexPokemon {

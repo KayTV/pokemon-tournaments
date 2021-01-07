@@ -1,5 +1,11 @@
 <div class="row">
     <div *ngFor="let region of regions" class="col-md-1">
-        <button type="submit" class="btn btn-light">{{region.name}}</button>
+        <button (click)="getRegionPokemon(region)" type="submit" class="btn btn-light">{{region.name}}</button>
+    </div>
+</div>
+<div class="row">
+    <div *ngFor="let pokemon of genOnePokemon" class="col-md-1">
+        {{pokemon.name}}
+        <img src="{{pokemon?.sprite}}">
     </div>
 </div>
