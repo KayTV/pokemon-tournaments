@@ -32,6 +32,7 @@ constructor(private http: HttpClient) { }
   getRegionPokemon(startId: number, endId: number): PokedexPokemon[] {
     let genOnePokemon: PokedexPokemon[] = [];
     this.getRegionPokemonServiceCall(startId, endId).subscribe(dex => {
+      console.log(dex.results);
       dex.results.forEach((pokemon) => {
         const id: string = pokemon.url.split('/')[6];
         let poke: PokedexPokemon = {
