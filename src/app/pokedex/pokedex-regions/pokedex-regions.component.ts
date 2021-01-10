@@ -5,7 +5,8 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
   selector: 'pokedex-regions',
-  templateUrl: './pokedex-regions.component.html'
+  templateUrl: './pokedex-regions.component.html',
+  styleUrls: ['../pokedex.less']
 })
 
 export class PokedexTabsComponent implements OnInit {

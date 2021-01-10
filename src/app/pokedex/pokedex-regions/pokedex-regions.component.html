@@ -5,7 +5,10 @@
 </div>
 <div class="row">
     <div *ngFor="let pokemon of genOnePokemon" class="col-md-1">
-        {{pokemon.name}}
-        <img src="{{pokemon?.sprite}}">
+        <div class="pokedex-box">
+            dex #: {{pokemon.id}}
+            <img src="{{pokemon?.sprite}}">
+            {{pokemon.name}}
+        </div>
     </div>
 </div>
