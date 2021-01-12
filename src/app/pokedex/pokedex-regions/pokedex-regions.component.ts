@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Pokedex, PokedexPokemon } from 'src/app/models/pokemon.model';
 import { Region } from 'src/app/models/regions.model';
 import { PokemonService } from 'src/app/services/pokemon.service';
+import { PokedexModalComponent } from '../pokedex-modal/pokedex-modal.component';
 
 @Component({
   selector: 'pokedex-regions',
@@ -10,11 +12,14 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 })
 
 export class PokedexTabsComponent implements OnInit {
+  @ViewChild( 'pokedexModal') pokedexModal: PokedexModalComponent;
   name = 'Pokedex';
   regions: Region[] = [];
   genOnePokemon: PokedexPokemon[];
 
-  constructor(private pokemoneService: PokemonService) { }
+  constructor(
+    private pokemoneService: PokemonService,
+    private modalService: NgbModal) { }
 
   ngOnInit() {
     this.pokemoneService.getRegions().subscribe((regions) => {
@@ -25,6 +30,11 @@ export class PokedexTabsComponent implements OnInit {
 
   getRegionPokemon(region: Region) {
     this.genOnePokemon = this.pokemoneService.getRegionPokemon(region.startId, region.endId);
+  }
+
+  openDetailsModal(pokemon: number) {
+    console.log(pokemon);
+    this.modalService.open(PokedexModalComponent);
   }
 
 }

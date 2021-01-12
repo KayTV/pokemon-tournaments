@@ -4,8 +4,8 @@
     </div>
 </div>
 <div class="row">
-    <div *ngFor="let pokemon of genOnePokemon" class="col-md-1">
-        <div class="pokedex-box">
+    <div *ngFor="let pokemon of genOnePokemon" class="col-md-1 pokedex-box">
+        <div (click)="openDetailsModal(pokemon.id)">
             dex #: {{pokemon.id}}
             <img src="{{pokemon?.sprite}}">
             {{pokemon.name}}
