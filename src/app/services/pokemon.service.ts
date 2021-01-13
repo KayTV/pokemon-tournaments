@@ -36,7 +36,7 @@ constructor(private http: HttpClient) { }
       dex.results.forEach((pokemon) => {
         const id: string = pokemon.url.split('/')[6];
         let poke: PokedexPokemon = {
-          name: pokemon.name,
+          name: pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1),
           sprite: this.spriteUrl + id + '.png',
           id: Number(id)
         }

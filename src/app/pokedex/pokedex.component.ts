@@ -16,7 +16,7 @@ export class PokedexComponent implements OnInit {
   constructor(private pokemoneService: PokemonService) { }
 
   ngOnInit() {
-    this.getGenOnePokemon();
+    // todo
   }
 
   getPokemon() {
@@ -26,12 +26,4 @@ export class PokedexComponent implements OnInit {
       console.log(pokemon);
     })
   }
-
-  getGenOnePokemon() {
-    // this.genOnePokemon = this.pokemoneService.genOneTest();
-    console.log(this.genOnePokemon);
-  }
-
-
-
 }

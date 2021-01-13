@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { PokemonService } from '../../services/pokemon.service';
-import { Pokemon, PokedexPokemon } from '../../models/pokemon.model';
+import { Pokemon } from '../../models/pokemon.model';
 
 @Component({
   selector: 'pokedex-modal',
@@ -9,25 +9,26 @@ import { Pokemon, PokedexPokemon } from '../../models/pokemon.model';
   styleUrls: ['../pokedex.less']
 })
 export class PokedexModalComponent implements OnInit {
-  searchPokemon: string;
-  pokemon: Pokemon;
-  genOnePokemon: PokedexPokemon[];
+    @Input() set dexNumber(dex: string) {
+        if (dex) {
+            this.getPokemon(dex);
+        }
+    }
+    pokemon: Pokemon;
 
-  closeResult: string;
-
-  constructor(
+    constructor(
         public activeModal: NgbActiveModal,
         private pokemoneService: PokemonService) { }
 
-  ngOnInit() {
+    ngOnInit() {
     // todo
-  }
+    }
 
-  getPokemon() {
-    this.pokemoneService.getPokemon(this.searchPokemon).subscribe(pokemon =>{
-      this.pokemon = pokemon;
-      this.searchPokemon = '';
-      console.log(pokemon);
+    getPokemon(dexNumber: string) {
+    this.pokemoneService.getPokemon(dexNumber).subscribe(pokemon =>{
+        this.pokemon = pokemon;
+        this.pokemon.name = this.pokemon.name.charAt(0).toUpperCase() + this.pokemon.name.slice(1);
+        console.log(pokemon);
     })
-  }
+    }
 }

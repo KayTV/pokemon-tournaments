@@ -12,7 +12,6 @@ import { PokedexModalComponent } from '../pokedex-modal/pokedex-modal.component'
 })
 
 export class PokedexTabsComponent implements OnInit {
-  @ViewChild( 'pokedexModal') pokedexModal: PokedexModalComponent;
   name = 'Pokedex';
   regions: Region[] = [];
   genOnePokemon: PokedexPokemon[];
@@ -32,9 +31,10 @@ export class PokedexTabsComponent implements OnInit {
     this.genOnePokemon = this.pokemoneService.getRegionPokemon(region.startId, region.endId);
   }
 
-  openDetailsModal(pokemon: number) {
+  openDetailsModal(pokemon: string) {
     console.log(pokemon);
-    this.modalService.open(PokedexModalComponent);
+    const modalRef = this.modalService.open(PokedexModalComponent);
+    modalRef.componentInstance.dexNumber = pokemon;
   }
 
 }
