@@ -3,6 +3,13 @@
         <button (click)="getRegionPokemon(region)" type="submit" class="btn btn-light">{{region.name}}</button>
     </div>
 </div>
+<br>
+<div class="row" *ngIf="selectedRegion">
+    <div class="col-md-12">
+      <h2>{{selectedRegion}} Region</h2>
+    </div>
+</div>
+<br>
 <div class="row">
     <div *ngFor="let pokemon of genOnePokemon" class="col-md-1 pokedex-box">
         <div (click)="openDetailsModal(pokemon.id)">

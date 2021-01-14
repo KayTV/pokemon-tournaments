@@ -21,14 +21,14 @@ export class PokedexModalComponent implements OnInit {
         private pokemoneService: PokemonService) { }
 
     ngOnInit() {
-    // todo
+        // todo
     }
 
     getPokemon(dexNumber: string) {
-    this.pokemoneService.getPokemon(dexNumber).subscribe(pokemon =>{
-        this.pokemon = pokemon;
-        this.pokemon.name = this.pokemon.name.charAt(0).toUpperCase() + this.pokemon.name.slice(1);
-        console.log(pokemon);
-    })
+        this.pokemoneService.getPokemon(dexNumber).subscribe(pokemon =>{
+            this.pokemon = pokemon;
+            this.pokemon.name = this.pokemon.name.charAt(0).toUpperCase() + this.pokemon.name.slice(1);
+            console.log(pokemon);
+        })
     }
 }

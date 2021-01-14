@@ -13,6 +13,7 @@ import { PokedexModalComponent } from '../pokedex-modal/pokedex-modal.component'
 
 export class PokedexTabsComponent implements OnInit {
   name = 'Pokedex';
+  selectedRegion: string;
   regions: Region[] = [];
   genOnePokemon: PokedexPokemon[];
 
@@ -28,6 +29,7 @@ export class PokedexTabsComponent implements OnInit {
   }
 
   getRegionPokemon(region: Region) {
+    this.selectedRegion = region.name
     this.genOnePokemon = this.pokemoneService.getRegionPokemon(region.startId, region.endId);
   }
 
