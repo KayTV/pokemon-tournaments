@@ -1,23 +1,26 @@
-<div class="row">
-    <div *ngFor="let region of regions" class="col-md-1">
-        <button (click)="getRegionPokemon(region)" type="submit" class="btn btn-light">{{region.name}}</button>
+<div class="container-fluid">
+    <div class="row">
+        <div *ngFor="let region of regions" class="col-md-1">
+            <button (click)="getRegionPokemon(region)" type="submit" class="btn btn-light">{{region.name}}</button>
+        </div>
     </div>
-</div>
-<br>
-<div class="row" *ngIf="selectedRegion">
-    <div class="col-md-12">
-      <h2>{{selectedRegion}} Region</h2>
+    <br>
+    <div class="row" *ngIf="selectedRegion">
+        <div class="col-md-12">
+          <h2>{{selectedRegion}} Region</h2>
+        </div>
     </div>
-</div>
-<br>
-<div class="row">
-    <div *ngFor="let pokemon of genOnePokemon" class="col-md-1 pokedex-box">
-        <div (click)="openDetailsModal(pokemon.id)">
-            dex #: {{pokemon.id}}
-            <img src="{{pokemon?.sprite}}">
-            {{pokemon.name}}
+    <br>
+    <div class="row">
+        <div *ngFor="let pokemon of genOnePokemon" class="col-md-1 pokedex-box">
+            <div (click)="openDetailsModal(pokemon.id)">
+                dex #: {{pokemon.id}}
+                <img src="{{pokemon?.sprite}}">
+                {{pokemon.name}}
+            </div>
         </div>
     </div>
 </div>
+
 
 <!-- todo: design pokedex box -->

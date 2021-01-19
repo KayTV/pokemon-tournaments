@@ -1,19 +1,19 @@
 <nav class="navbar navbar-dark bg-dark mb-5">
-  <a class="navbar-brand" href="/">VF/N. Chest Pogo</a>
+  <a class="navbar-brand" routerLink="/">KayTV's Pokemon Site</a>
   <div class="navbar-expand mr-auto">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="/">Pokedex</a>
-      <a class="nav-item nav-link" href="#">Tournaments</a>
-      <a class="nav-item nav-link" href="/ranks">Ranks</a>
+      <a class="nav-item nav-link active" routerLink="/">Pokedex</a>
+      <a class="nav-item nav-link" routerLink="/">Tournaments</a>
+      <a class="nav-item nav-link" routerLink="/ranks">Ranks</a>
     </div>
   </div>
   <div class="navbar-expand ml-auto navbar-nav">
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="https://github.com/KayTV" target="_blank">
-        <i class="fa fa-github"></i>
+        <fa-icon [icon]="faGithub"></fa-icon>
       </a>
       <a class="nav-item nav-link" href="https://twitter.com/KayTVN" target="_blank">
-        <i class="fa fa-twitter"></i>
+        <fa-icon [icon]="faTwitter"></fa-icon>
       </a>
     </div>
   </div>
