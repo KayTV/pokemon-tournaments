@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'references',
   templateUrl: './references.html'
 })
-export class RanksComponent {
+export class ReferenceComponent {
   title = 'References';
 
   // this may be a dropdown nav menu item with references 

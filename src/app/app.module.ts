@@ -8,7 +8,7 @@ import {NgbActiveModal, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PokedexComponent } from './pokedex/pokedex.component';
-import { RanksComponent } from './references/references.component';
+import { ReferenceComponent } from './references/references.component';
 import { PokedexTabsComponent } from './pokedex/pokedex-regions/pokedex-regions.component';
 
 import { PokemonService } from './services/pokemon.service';
@@ -19,7 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   declarations: [
     AppComponent,
     PokedexComponent,
-    RanksComponent,
+    ReferenceComponent,
     PokedexTabsComponent,
     PokedexModalComponent
   ],

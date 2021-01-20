@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { PokedexComponent } from './pokedex/pokedex.component';
-import { RanksComponent } from './references/references.component';
-import { PokedexTabsComponent } from './pokedex/pokedex-regions/pokedex-regions.component';
+import { ReferenceComponent } from './references/references.component';
 
 const routes: Routes = [
   {
@@ -11,8 +10,8 @@ const routes: Routes = [
     component: PokedexComponent
   },
   {
-    path: 'ranks',
-    component: RanksComponent
+    path: 'references',
+    component: ReferenceComponent
   }
 ];
 
