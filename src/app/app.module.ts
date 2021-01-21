@@ -14,6 +14,7 @@ import { PokedexTabsComponent } from './pokedex/pokedex-regions/pokedex-regions.
 import { PokemonService } from './services/pokemon.service';
 import { PokedexModalComponent } from './pokedex/pokedex-modal/pokedex-modal.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PokemonGoComponent } from './pokemon-go/pokemon-go.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PokedexComponent,
     ReferenceComponent,
     PokedexTabsComponent,
-    PokedexModalComponent
+    PokedexModalComponent,
+    PokemonGoComponent
   ],
   imports: [
     BrowserModule,
