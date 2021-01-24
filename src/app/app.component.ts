@@ -10,10 +10,5 @@ export class AppComponent {
   title = 'Pokemon Tournaments';
   faGithub = faGithub;
   faTwitter = faTwitter;
-  navbarOpen = false;
-
-  toggleNavbar() {
-    this.navbarOpen = !this.navbarOpen;
-  }
 
 }
