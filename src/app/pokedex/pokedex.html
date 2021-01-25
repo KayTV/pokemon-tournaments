@@ -11,14 +11,16 @@
     </div>
   </div>
   <br>
-  <div class="row search-bar">
-    <div class="col-md-2">
+  <div class="row">
+    <div class="col-md-2 offset-md-1">
       <label for="pokedex">Search Pokemon: </label>
     </div>
     <div class="col-md-5">
       <input type="text" class="form-control" id="pokedex" name="pokemon" [(ngModel)]="searchPokemon">
     </div>
-    <button (click)="getPokemon()" type="submit" class="btn btn-light">Who's That Pokemon?</button>
+    <div class="col-md-2">
+      <button (click)="getPokemon()" type="submit" class="btn btn-outline-dark btn-block">Who's That Pokemon?</button>
+    </div> 
   </div>
   <div class="row">
     <div class="col-md-12">
