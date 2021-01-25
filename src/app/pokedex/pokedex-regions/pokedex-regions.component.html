@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
-        <div *ngFor="let region of regions" class="col-md-1">
-            <button (click)="getRegionPokemon(region)" type="submit" class="btn btn-light">{{region.name}}</button>
+        <div *ngFor="let region of regions" class="col-md-2 region-buttons">
+            <button (click)="getRegionPokemon(region)" type="button" class="btn btn-outline-dark btn-block">{{region.name}}</button>
         </div>
     </div>
     <br>
