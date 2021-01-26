@@ -17,15 +17,11 @@
     </div>
     <div class="col-md-5">
       <input type="text" class="form-control" id="pokedex" name="pokemon" [(ngModel)]="searchPokemon">
+      <span>(You can search Pokemon name or Pokedex ID)</span>
     </div>
     <div class="col-md-2">
       <button (click)="getPokemon()" type="submit" class="btn btn-outline-dark btn-block">Who's That Pokemon?</button>
     </div> 
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      (You can search Pokemon name or Pokedex ID)
-    </div>
   </div>
   <br>
   <pokedex-regions></pokedex-regions>
