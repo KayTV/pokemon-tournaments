@@ -16,7 +16,7 @@
       <label for="pokedex">Search Pokemon: </label>
     </div>
     <div class="col-md-5">
-      <input type="text" class="form-control" id="pokedex" name="pokemon" [(ngModel)]="searchPokemon">
+      <input type="text" class="form-control" id="pokedex" name="pokemon" [(ngModel)]="searchPokemon" (ngModelChange)="pokemonChange()">
       <span>(You can search Pokemon name or Pokedex ID)</span>
     </div>
     <div class="col-md-2">

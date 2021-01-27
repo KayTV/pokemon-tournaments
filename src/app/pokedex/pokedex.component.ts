@@ -40,6 +40,10 @@ export class PokedexComponent implements OnInit {
     });
   }
 
+  pokemonChange() {
+    this.error = false;
+  }
+
   closeBanner() {
     this.error = false;
     this.searchPokemon = '';
