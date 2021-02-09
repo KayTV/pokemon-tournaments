@@ -34,7 +34,6 @@ export class PokedexTabsComponent implements OnInit {
   }
 
   openDetailsModal(pokemon: string) {
-    console.log(pokemon);
     const modalRef = this.modalService.open(PokedexModalComponent);
     modalRef.componentInstance.dexNumber = pokemon;
   }

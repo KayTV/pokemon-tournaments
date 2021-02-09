@@ -1,13 +1,29 @@
 
 <div class="modal-header">
-    <h4 class="modal-title">{{pokemon?.name}}</h4>
+    <p class="modal-title">{{pokemon?.name}}</p>
     <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    <img src="{{pokemon?.sprites?.front_default}}">
-    <img src="{{pokemon?.sprites?.front_shiny}}">
+    <h3 class="modal-body-header">{{pokemon?.name}}</h3>
+    <hr>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="modal-about-section">
+            Abilities:
+          </div> 
+        </div>
+        <div class="col-md-3">
+          <img src="{{pokemon?.sprites?.front_default}}">
+        </div>
+        <div class="col-md-3">
+          <img src="{{pokemon?.sprites?.front_shiny}}">
+        </div>
+      </div>
+    </div>
+        
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
