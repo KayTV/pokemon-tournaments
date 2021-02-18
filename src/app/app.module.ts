@@ -15,6 +15,7 @@ import { PokemonService } from './services/pokemon.service';
 import { PokedexModalComponent } from './pokedex/pokedex-modal/pokedex-modal.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PokemonGoComponent } from './pokemon-go/pokemon-go.component';
+import { KantoEventComponent } from './pokemon-go/events/kanto-event/kanto-event.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PokemonGoComponent } from './pokemon-go/pokemon-go.component';
     ReferenceComponent,
     PokedexTabsComponent,
     PokedexModalComponent,
-    PokemonGoComponent
+    PokemonGoComponent,
+    KantoEventComponent
   ],
   imports: [
     BrowserModule,

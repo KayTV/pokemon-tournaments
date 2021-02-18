@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PokedexComponent } from './pokedex/pokedex.component';
 import { ReferenceComponent } from './references/references.component';
 import { PokemonGoComponent } from './pokemon-go/pokemon-go.component';
+import { KantoEventComponent } from './pokemon-go/events/kanto-event/kanto-event.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,16 @@ const routes: Routes = [
   },
   {
     path: 'pokemongo',
-    component: PokemonGoComponent
+    children: [
+      {
+        path: '',
+        component: PokemonGoComponent
+      },
+      {
+        path: 'kanto-event',
+        component: KantoEventComponent
+      }
+    ]
   }
 ];
 
