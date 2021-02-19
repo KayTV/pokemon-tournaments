@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 import { Pokemon, Pokedex, PokedexPokemon } from '../models/pokemon.model';
 import { Region } from '../models/regions.model';
@@ -32,7 +32,6 @@ constructor(private http: HttpClient) { }
   getRegionPokemon(startId: number, endId: number): PokedexPokemon[] {
     let genOnePokemon: PokedexPokemon[] = [];
     this.getRegionPokemonServiceCall(startId, endId).subscribe(dex => {
-      console.log(dex.results);
       dex.results.forEach((pokemon) => {
         const id: string = pokemon.url.split('/')[6];
         let poke: PokedexPokemon = {

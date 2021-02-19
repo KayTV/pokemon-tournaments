@@ -5,32 +5,16 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Spearow x2</li>
-              <li class="list-group-item">Pidgey x2</li>
-              <li class="list-group-item">Clefairy x2</li>
-              <li class="list-group-item">Vulpix x2</li>
-              <li class="list-group-item">Zubat x2</li>
-              <li class="list-group-item">Paras x2</li>
-              <li class="list-group-item">Diglett x1</li>
-              <li class="list-group-item">Meowth x2</li>
-              <li class="list-group-item">Bellsprout x2</li>
-              <li class="list-group-item">Slowpoke x2</li>
-              <li class="list-group-item">Magnemite x2</li>
-              <li class="list-group-item">Farfetch'd x1</li>
-              <li class="list-group-item">Dodou x2</li>
-              <li class="list-group-item">Grimer x1</li>
-              <li class="list-group-item">Eggy x1</li>
-              <li class="list-group-item">Hitmonlee, Hitmonchan x1</li>
-              <li class="list-group-item">Kanga x1</li>
-              <li class="list-group-item">Goldeen x2</li>
-              <li class="list-group-item">Jynx x1</li>
-              <li class="list-group-item">Ditto x1</li>
-              <li class="list-group-item">Kabuto x1</li>
-              <li class="list-group-item">Snorlax x1</li>
-              <li class="list-group-item">Mew x1</li>
-            </ul>
+        <div *ngFor="let pokemon of kantoNeedPokemon"  class="col-md-2">
+            <div class="card">
+                <img src="{{pokemon?.sprite}}" class="card-img-top" alt="...">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                      {{pokemon.name}}
+                    </label>
+                  </div>
+            </div>
         </div>
     </div>
 </div>

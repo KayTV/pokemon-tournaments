@@ -16,6 +16,7 @@ import { PokedexModalComponent } from './pokedex/pokedex-modal/pokedex-modal.com
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PokemonGoComponent } from './pokemon-go/pokemon-go.component';
 import { KantoEventComponent } from './pokemon-go/events/kanto-event/kanto-event.component';
+import { KantoEventConstants } from './constants/kanto-event.constants';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { KantoEventComponent } from './pokemon-go/events/kanto-event/kanto-event
   ],
   providers: [
     PokemonService,
-    NgbActiveModal
+    NgbActiveModal,
+    KantoEventConstants
   ],
   bootstrap: [AppComponent]
 })
