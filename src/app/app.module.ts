@@ -17,6 +17,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PokemonGoComponent } from './pokemon-go/pokemon-go.component';
 import { KantoEventComponent } from './pokemon-go/events/kanto-event/kanto-event.component';
 import { KantoEventConstants } from './constants/kanto-event.constants';
+import { ShinyMewComponent } from './pokemon-go/events/shiny-mew/shiny-mew.component';
+import { MarchMadnessComponent } from './pokemon-go/events/march-madness/march-madness.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { KantoEventConstants } from './constants/kanto-event.constants';
     PokedexTabsComponent,
     PokedexModalComponent,
     PokemonGoComponent,
-    KantoEventComponent
+    KantoEventComponent,
+    ShinyMewComponent,
+    MarchMadnessComponent
   ],
   imports: [
     BrowserModule,

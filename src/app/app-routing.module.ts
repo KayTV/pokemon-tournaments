@@ -5,6 +5,8 @@ import { PokedexComponent } from './pokedex/pokedex.component';
 import { ReferenceComponent } from './references/references.component';
 import { PokemonGoComponent } from './pokemon-go/pokemon-go.component';
 import { KantoEventComponent } from './pokemon-go/events/kanto-event/kanto-event.component';
+import { ShinyMewComponent } from './pokemon-go/events/shiny-mew/shiny-mew.component';
+import { MarchMadnessComponent } from './pokemon-go/events/march-madness/march-madness.component';
 
 const routes: Routes = [
   {
@@ -25,6 +27,14 @@ const routes: Routes = [
       {
         path: 'kanto-event',
         component: KantoEventComponent
+      },
+      {
+        path: 'shiny-mew',
+        component: ShinyMewComponent
+      },
+      {
+        path: 'march-madness',
+        component: MarchMadnessComponent
       }
     ]
   }
