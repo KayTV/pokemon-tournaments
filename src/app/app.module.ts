@@ -19,6 +19,7 @@ import { KantoEventComponent } from './pokemon-go/events/kanto-event/kanto-event
 import { KantoEventConstants } from './constants/kanto-event.constants';
 import { ShinyMewComponent } from './pokemon-go/events/shiny-mew/shiny-mew.component';
 import { MarchMadnessComponent } from './pokemon-go/events/march-madness/march-madness.component';
+import { BackButtonComponent } from './pokemon-go/back-button/back-button.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MarchMadnessComponent } from './pokemon-go/events/march-madness/march-m
     PokemonGoComponent,
     KantoEventComponent,
     ShinyMewComponent,
-    MarchMadnessComponent
+    MarchMadnessComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule,
