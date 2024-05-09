@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import {NgbActiveModal, NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbActiveModal, NgbModule, NgbNavModule, NgbTypeaheadModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +21,7 @@ import { ShinyMewComponent } from './pokemon-go/events/shiny-mew/shiny-mew.compo
 import { MarchMadnessComponent } from './pokemon-go/events/march-madness/march-madness.component';
 import { BackButtonComponent } from './pokemon-go/back-button/back-button.component';
 import { TypeaheadInputComponent } from './common/typeahead-input/typeahead-input.component';
+import { JsonPipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,10 @@ import { TypeaheadInputComponent } from './common/typeahead-input/typeahead-inpu
     HttpClientModule,
     FormsModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    JsonPipe,
+    NgbTypeaheadModule,
+    NgbNavModule
   ],
   providers: [
     PokemonService,
