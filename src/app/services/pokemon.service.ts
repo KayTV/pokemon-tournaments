@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 
-import { Pokemon, Pokedex, PokedexPokemon } from '../models/pokemon.model';
+import { Pokemon, Pokedex, PokedexPokemon, PokedexResult } from '../models/pokemon.model';
 import { Region } from '../models/regions.model';
 
 @Injectable()
@@ -15,6 +15,18 @@ constructor(private http: HttpClient) { }
 
   getPokemon(searchPokemon: string): Observable<Pokemon> {
     return this.http.get<Pokemon>(this.baseUrl + searchPokemon);
+  }
+
+  getAllPokemon(): string[] {
+    let allPokemon: string[] = [];
+    this.getRegionPokemonServiceCall(0, 1008).subscribe(pokemon => {
+      if (pokemon && pokemon.results.length > 0) {
+        pokemon.results.forEach((poke) => {
+          allPokemon.push(poke.name);
+        });
+      }
+    });
+    return allPokemon;
   }
 
   getGenOnePokemon(): Observable<Pokedex> {

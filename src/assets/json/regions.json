@@ -50,8 +50,14 @@
     },
     {
         "id": 9,
+        "name": "Paldea",
+        "startId": 906,
+        "endId": 102
+    },
+    {
+        "id": 10,
         "name": "Mega",
-        "startId": 930,
-        "endId": 58
+        "startId": 10033,
+        "endId": 10
     }
   ]
