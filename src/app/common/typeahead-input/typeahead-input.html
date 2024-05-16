@@ -1,4 +1,4 @@
 <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="searchPokemon" [ngbTypeahead]="search" (ngModelChange)="pokemonChange()"/>
-
+<span>(You can search Pokemon name or Pokedex ID)</span>
 <hr />
 <pre>Pokemon: {{ searchPokemon | json }}</pre>

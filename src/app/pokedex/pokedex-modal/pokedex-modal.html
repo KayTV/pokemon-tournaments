@@ -1,5 +1,41 @@
+<!-- <div class="modal" id="myModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content"> -->
 
-<div class="modal-header">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <p class="modal-title">{{pokemon?.name}}</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="modal-about-section">
+                Abilities:
+              </div> 
+            </div>
+            <div class="col-md-3">
+              <img src="{{pokemon?.sprites?.front_default}}">
+            </div>
+            <div class="col-md-3">
+              <img src="{{pokemon?.sprites?.front_shiny}}">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    <!-- </div>
+  </div>
+</div> -->
+<!-- <div class="modal-header">
     <p class="modal-title">{{pokemon?.name}}</p>
     <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
@@ -27,6 +63,6 @@
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
-</div>
+</div> -->
 
 <!-- to: design modal -->

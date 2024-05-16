@@ -15,6 +15,7 @@ export class PokedexComponent implements OnInit {
   pokemon: Pokemon;
   genOnePokemon: PokedexPokemon[];
   error: boolean = false;
+  reset: boolean = false;
 
   constructor(
     private pokemoneService: PokemonService,
@@ -28,7 +29,8 @@ export class PokedexComponent implements OnInit {
     this.pokemoneService.getPokemon(this.searchPokemon).subscribe(pokemon =>{
       if (pokemon) {
         this.pokemon = pokemon;
-        this.searchPokemon = '';
+        delete this.searchPokemon;
+        this.reset = true;
         const modalRef = this.modalService.open(PokedexModalComponent);
         modalRef.componentInstance.dexNumber = pokemon.id;
         this.error = false;
@@ -42,11 +44,13 @@ export class PokedexComponent implements OnInit {
 
   pokemonChange(poke: string) {
     this.error = false;
+    this.reset = false;
     this.searchPokemon = poke;
   }
 
   closeBanner() {
     this.error = false;
-    this.searchPokemon = '';
+    this.reset = true;
+    delete this.searchPokemon;
   }
 }
